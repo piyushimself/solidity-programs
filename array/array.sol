@@ -35,4 +35,12 @@ contract Array {
     function printArray() public view returns (uint256[] memory) {
         return num;
     }
+
+    function readUsingLoop() public view returns (uint256[] memory) {
+        uint256[] memory result = new uint256[](num.length);
+        for (uint256 i = 0; i < num.length; i++) {
+            result[i] = num[i];
+        }
+        return result;
+    }
 }
