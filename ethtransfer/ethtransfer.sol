@@ -19,4 +19,7 @@ contract EthTransfer {
         );
         require(success, "Ether transfer failed");
     }
+    function checkEth() public view returns (uint256) {
+        return address(this).balance;
+    }
 }
